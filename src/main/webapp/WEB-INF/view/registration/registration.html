@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+<div>
+    <h1>Registration</h1>
+</div>
+<form th:method="post" th:action="@{http://localhost:8080/shop.com/registration}" th:object="${userForm}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{username}" id="name" placeholder="Enter your name"/>
+    <label for="password">Enter password: </label>
+    <input type="text" th:field="*{password}" id="password" placeholder="Password"/>
+    <br>
+    <label>
+        <input type="checkbox" name="TERMS" value="ON" uncheked/>
+    </label>
+    I agree with terms of service
+    <br>
+    <button type="submit">Enter</button>
+</form>
+</body>
+</html>

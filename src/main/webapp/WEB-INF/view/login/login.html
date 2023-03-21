@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<div class="container">
+    <form class="signin" method="post" action="http://localhost:8080/shop.com/login">
+        <h2 class="form-signin-heading">Login</h2>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" placeholder="Username" required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" class="form-control" placeholder="Password" required>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+    </form>
+
+    <form action="http://localhost:8080/shop.com/registration" method="get">
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+</body>
+</html>

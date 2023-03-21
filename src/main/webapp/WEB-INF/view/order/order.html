@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order</title>
+</head>
+<body>
+<div>
+  <h1 th:text="${welcomeMessage}"></h1>
+</div><div>
+  <table>
+    <th:block th:each="good : ${cart.getGoods()}">
+      <tr >
+        <td th:text = "${good.getTitle()}"></td>
+        <td th:text="${good.getPrice()}"></td>
+        <td> $</td>
+      </tr>
+    </th:block>
+  </table>
+    <h4 th:text = "${totalCost}"></h4>
+</div>
+<hr/>
+<form th:method="post" th:action="@{http://localhost:8080/shop.com/logout}">
+  <button type="submit">Logout</button>
+</form>
+</body>
+</html>
